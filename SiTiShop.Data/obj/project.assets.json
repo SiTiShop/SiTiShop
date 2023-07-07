@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Buu Buu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj",
+      "projectUniqueName": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj",
       "projectName": "SiTiShop.Data",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\obj\\",
+      "projectPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj",
+      "packagesPath": "C:\\Users\\Buu Buu\\.nuget\\packages\\",
+      "outputPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Buu Buu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

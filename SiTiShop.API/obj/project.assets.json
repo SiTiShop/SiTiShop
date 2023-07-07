@@ -259,19 +259,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Buu Buu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.API\\SiTiShop.API.csproj",
+      "projectUniqueName": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.API\\SiTiShop.API.csproj",
       "projectName": "SiTiShop.API",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.API\\SiTiShop.API.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.API\\obj\\",
+      "projectPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.API\\SiTiShop.API.csproj",
+      "packagesPath": "C:\\Users\\Buu Buu\\.nuget\\packages\\",
+      "outputPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Buu Buu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -279,18 +279,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Business\\SiTiShop.Business.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Business\\SiTiShop.Business.csproj"
+            "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Business\\SiTiShop.Business.csproj": {
+              "projectPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Business\\SiTiShop.Business.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj"
+            "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj": {
+              "projectPath": "D:\\SiTiShop\\SiTiShop\\SiTiShop\\SiTiShop.Data\\SiTiShop.Data.csproj"
             }
           }
         }
@@ -329,7 +329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
