@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Repositories.UserRepo
 {
-    internal interface IUserRepo
+    public interface IUserRepo
     {
     }
 }

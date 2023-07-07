@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SiTiShop.Business.Service.UserService
 {
-    internal class UserService
+    public class UserService : IUserService
     {
     }
 }
