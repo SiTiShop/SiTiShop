@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Entities
 {
-    internal class tblUser
+    public partial class tblUser
     {
         public Guid Id { get; set; }
 
