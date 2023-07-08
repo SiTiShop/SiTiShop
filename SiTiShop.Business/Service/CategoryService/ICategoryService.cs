@@ -13,5 +13,7 @@ namespace SiTiShop.Business.Service.CategoryService
     public interface ICategoryService 
     {
         public Task<ResultModel> getDetail(Guid id);
+        public Task<ResultModel> create(string name, string status, string description);
+        public Task<ResultModel> getAll();
     }
 }

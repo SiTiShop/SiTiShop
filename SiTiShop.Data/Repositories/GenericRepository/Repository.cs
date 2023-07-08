@@ -27,10 +27,6 @@ namespace SiTiShop.Data.Repositories.GenericRepository
             return (Guid)entity.GetType().GetProperty("Id").GetValue(entity);
 #pragma warning restore CS8605 // Unboxing a possibly null value.
         }
-
-
-
-
     }
 }
 

@@ -18,6 +18,16 @@ namespace SiTiShop.Data.Repositories.CategoryRepo
             //_mapper = mapper;
             _context = context;
         }
+
+        public async Task<TblCategory> GetByCategoryName(string name)
+        {
+            return await _context.TblCategories.Where(x => x.Name.Equals(name)).FirstOrDefaultAsync();
+        }
+
+        public async Task<List<TblCategory>> GetAllCategory()
+        {
+            return await _context.TblCategories.ToListAsync();
+        }
     }
-    
+
 }

@@ -10,5 +10,7 @@ namespace SiTiShop.Data.Repositories.CategoryRepo
 {
     public interface ICategoryRepo : IRepository<TblCategory>
     {
+        Task<TblCategory> GetByCategoryName(string name);
+        Task<List<TblCategory>> GetAllCategory();
     }
 }
