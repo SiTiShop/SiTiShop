@@ -1,6 +1,9 @@
 using SiTiShop.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-
+using SiTiShop.Data.Repositories.CategoryRepo;
+using SiTiShop.Business.Service.CategoryService;
+using SiTiShop.Data.Repositories.GenericRepository;
+using NuGet.Protocol.Core.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +14,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// Connect Database
 builder.Services.AddDbContext<SiTiShopContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Subcribe service
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+//Subcribe repository
+builder.Services.AddTransient<ICategoryRepo, CategoryRepo>();
+
+
+
+
+
 
 var app = builder.Build();
 
