@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Entities
 {
-    public partial class tblProduct
+    public partial class TblProduct
     {
+        public TblProduct()
+        {
+            TblProductItems = new HashSet<TblProductItem>();
+        }
+
         public Guid Id { get; set; }
+        public string Name { get; set; } = null!;
+        public string Description { get; set; } = null!;
+        public Guid CategoryId { get; set; }
+        public string Status { get; set; } = null!;
 
-        public string? Name { get; set; }
-
-        public string? Description { get; set; }
-
-        public Guid? CategoryId { get; set; }
-
-        public string? Status { get; set;}
-
+        public virtual TblCategory Category { get; set; } = null!;
+        public virtual ICollection<TblProductItem> TblProductItems { get; set; }
     }
 }

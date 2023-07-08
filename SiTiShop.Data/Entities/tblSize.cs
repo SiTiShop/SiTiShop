@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Entities
 {
-    public partial class tblSize
+    public partial class TblSize
     {
+        public TblSize()
+        {
+            TblProductItems = new HashSet<TblProductItem>();
+        }
+
         public Guid Id { get; set; }
+        public int Name { get; set; }
+        public string Status { get; set; } = null!;
 
-        public string? Name { get; set; }
-
-        public string? Status { get; set; }
-
+        public virtual ICollection<TblProductItem> TblProductItems { get; set; }
     }
 }

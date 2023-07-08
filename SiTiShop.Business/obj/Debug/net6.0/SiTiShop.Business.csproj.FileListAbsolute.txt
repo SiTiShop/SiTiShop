@@ -1,0 +1,17 @@
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.csproj.AssemblyReference.cache
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.AssemblyInfoInputs.cache
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.AssemblyInfo.cs
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.csproj.CoreCompileInputs.cache
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Business.deps.json
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Business.dll
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Business.pdb
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Data.dll
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Data.pdb
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.csproj.CopyComplete
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.dll
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\refint\SiTiShop.Business.dll
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.pdb
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\ref\SiTiShop.Business.dll
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\bin\Debug\net6.0\SiTiShop.Business.runtimeconfig.json
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.Business\obj\Debug\net6.0\SiTiShop.Business.genruntimeconfig.cache

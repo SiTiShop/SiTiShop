@@ -8,5 +8,6 @@ namespace SiTiShop.Business.Service.UserService
 {
     public interface IUserService
     {
+
     }
 }

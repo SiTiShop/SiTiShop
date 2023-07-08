@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Entities
 {
-    public partial class tblCart
+    public partial class TblCart
     {
+        public TblCart()
+        {
+            TblCartDetails = new HashSet<TblCartDetail>();
+        }
+
         public Guid Id { get; set; }
-
         public Guid UserId { get; set; }
+        public string Status { get; set; } = null!;
 
-        public string? Status { get; set; }
-
+        public virtual TblUser User { get; set; } = null!;
+        public virtual ICollection<TblCartDetail> TblCartDetails { get; set; }
     }
 }

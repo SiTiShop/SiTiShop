@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SiTiShop.Data.Entities
 {
-    public partial class tblPlace
+    public partial class TblPlace
     {
+        public TblPlace()
+        {
+            TblOrders = new HashSet<TblOrder>();
+        }
+
         public Guid Id { get; set; }
+        public int Room { get; set; }
+        public string Status { get; set; } = null!;
 
-        public int? Room { get; set; }
-
-        public string? Status { get; set; }
+        public virtual ICollection<TblOrder> TblOrders { get; set; }
     }
 }
