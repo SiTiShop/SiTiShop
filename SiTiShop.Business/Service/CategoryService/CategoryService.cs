@@ -57,6 +57,13 @@ namespace SiTiShop.Business.Service.CategoryService
             ResultModel result = new();
             try
             {
+                if(name == null || name == "")
+                {
+                    result.IsSuccess = false;
+                    result.Code = 200;
+                    result.Message = "Ten danh muc trong!";
+                    return result;
+                }
                 Guid id = Guid.NewGuid();
                 TblCategory tblCategory = new TblCategory()
                 {
@@ -65,7 +72,7 @@ namespace SiTiShop.Business.Service.CategoryService
                     Description = description,
                     Status = status
                 };
-                var createCategory = await _cateRepo.GetByCategoryName(tblCategory.Name);
+                var createCategory = await _cateRepo.GetByCategoryName(name);
                 if (createCategory != null)
                 {
                     result.IsSuccess = false;
@@ -98,7 +105,7 @@ namespace SiTiShop.Business.Service.CategoryService
                 if (Category == null)
                 {
                     result.IsSuccess = false;
-                    result.Code = 400;
+                    result.Code = 200;
                     result.Message = "Danh muc trong";
                     return result;
                 }

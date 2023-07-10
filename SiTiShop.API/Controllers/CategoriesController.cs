@@ -22,9 +22,7 @@ namespace SiTiShop.API.Controllers
             _service = service;
         }
 
-
-        // GET: Categories/Details/5
-        [HttpGet("get-category-by-id")]
+        [HttpGet("get-by-id")]
         public async Task<IActionResult> Details(Guid id)
         {
             Data.Models.ResultModel.ResultModel result = await _service.getDetail(id);
@@ -32,35 +30,13 @@ namespace SiTiShop.API.Controllers
         }
 
 
-        [HttpPost("create-category")]
-        /*public async Task<IActionResult> Create(string name, string status, string des)
-        {   
-            Guid id = Guid.NewGuid();
-            TblCategory tblCategory = new TblCategory()
-            {
-                Id = id,
-                Name = name,
-                Description = des,
-                Status = status
-            };
-            _context.TblCategories.Add(tblCategory);    
-            await _context.SaveChangesAsync();
-
-            return Ok(tblCategory);
-        }*/
+        [HttpPost("create")]
         public async Task<IActionResult> Create(string name, string status, string des)
         {
             Data.Models.ResultModel.ResultModel result = await _service.create(name, status, des);
             return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
 
-        /*[HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll()
-        {   
-            var result = await _context.TblCategories.ToListAsync();
-
-            return Ok(result);
-        }*/
         [HttpGet("get-all")]
         public async Task<IActionResult> GetAll()
         {
