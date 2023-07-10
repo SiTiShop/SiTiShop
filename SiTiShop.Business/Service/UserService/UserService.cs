@@ -8,6 +8,7 @@ using SiTiShop.Data.Entities;
 using SiTiShop.Data.Models.ResultModel;
 using SiTiShop.Data.Repositories.CategoryRepo;
 using SiTiShop.Data.Repositories.UserRepo;
+using SiTiShop.Business.Utilities.UserAuthentication;
 using System.Security.Cryptography;
 
 namespace SiTiShop.Business.Service.UserService
@@ -43,7 +44,7 @@ namespace SiTiShop.Business.Service.UserService
                     result.Message = "Trung Email";
                     return result;
                 }
-                byte[] HashPassword = CreatePasswordHash(Password);
+                byte[] HashPassword = UserAuthentication.CreatePasswordHash(Password);
                 Guid id = Guid.NewGuid();
                 DateTime Date = DateTime.Now;
                 TblUser UserModel = new TblUser()
@@ -88,8 +89,8 @@ namespace SiTiShop.Business.Service.UserService
                     result.Message = "User khong ton tai";
                     return result;
                 }
-                byte[] HashPasswordInput = CreatePasswordHash(Password);
-                bool isMatch = VerifyPassword(HashPasswordInput, User.Password);
+                byte[] HashPasswordInput = UserAuthentication.CreatePasswordHash(Password);
+                bool isMatch = UserAuthentication.VerifyPasswordHash(HashPasswordInput, User.Password);
                 if (!isMatch)
                 {
                     result.IsSuccess = false;
@@ -112,30 +113,6 @@ namespace SiTiShop.Business.Service.UserService
                 result.ResponseFailed = e.InnerException != null ? e.InnerException.Message + "\n" + e.StackTrace : e.Message + "\n" + e.StackTrace;
             }
             return result;
-        }
-
-        private byte[] CreatePasswordHash(string password)
-        {
-            using (MD5 mh = MD5.Create())
-            { 
-                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(password);
-                byte[] hash = mh.ComputeHash(inputBytes);
-                return hash;
-            }
-        }
-
-        private bool VerifyPassword(byte[] array1, byte[] array2)
-        {
-            if (array1.Length != array2.Length)
-                return false;
-
-            for (int i = 0; i < array1.Length; i++)
-            {
-                if (array1[i] != array2[i])
-                    return false;
-            }
-
-            return true;
         }
     }
 }
