@@ -44,7 +44,7 @@ namespace SiTiShop.Business.Service.UserService
                     result.Message = "Trung Email";
                     return result;
                 }
-                byte[] HashPassword = UserAuthentication.CreatePasswordHash(Password);
+                byte[] HashPassword = UserUtilities.CreatePasswordHash(Password);
                 Guid id = Guid.NewGuid();
                 DateTime Date = DateTime.Now;
                 TblUser UserModel = new TblUser()
@@ -89,8 +89,8 @@ namespace SiTiShop.Business.Service.UserService
                     result.Message = "User khong ton tai";
                     return result;
                 }
-                byte[] HashPasswordInput = UserAuthentication.CreatePasswordHash(Password);
-                bool isMatch = UserAuthentication.VerifyPasswordHash(HashPasswordInput, User.Password);
+                byte[] HashPasswordInput = UserUtilities.CreatePasswordHash(Password);
+                bool isMatch = UserUtilities.VerifyPasswordHash(HashPasswordInput, User.Password);
                 if (!isMatch)
                 {
                     result.IsSuccess = false;
