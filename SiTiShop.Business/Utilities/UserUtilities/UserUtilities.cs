@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SiTiShop.Business.Utilities.UserAuthentication
 {
-    public class UserAuthentication
+    public class UserUtilities
     {
         public static byte[] CreatePasswordHash(string password)
         {
