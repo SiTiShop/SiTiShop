@@ -5,11 +5,11 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SiTiShop.Business.Utilities.UserAuthentication
+namespace SiTiShop.Business.Utilities.UserUtilities
 {
-    public class UserAuthentication
+    public class UserUtilities
     {
-        protected static byte[] CreatePasswordHash(string password)
+        public static byte[] CreatePasswordHash(string password)
         {
             using (MD5 mh = MD5.Create())
             {
@@ -19,7 +19,7 @@ namespace SiTiShop.Business.Utilities.UserAuthentication
             }
         }
 
-        protected static bool VerifyPasswordHash(byte[] array1, byte[] array2)
+        public static bool VerifyPasswordHash(byte[] array1, byte[] array2)
         {
             if (array1.Length != array2.Length)
                 return false;

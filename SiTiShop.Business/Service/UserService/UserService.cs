@@ -8,7 +8,7 @@ using SiTiShop.Data.Entities;
 using SiTiShop.Data.Models.ResultModel;
 using SiTiShop.Data.Repositories.CategoryRepo;
 using SiTiShop.Data.Repositories.UserRepo;
-using SiTiShop.Business.Utilities.UserAuthentication;
+using SiTiShop.Business.Utilities.UserUtilities;
 using System.Security.Cryptography;
 
 namespace SiTiShop.Business.Service.UserService
