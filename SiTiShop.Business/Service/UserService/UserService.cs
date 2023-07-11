@@ -98,11 +98,11 @@ namespace SiTiShop.Business.Service.UserService
                     result.Message = "Mat khau sai";
                     return result;
                 }
-
+                string token = UserUtilities.GenerateJWT(User);
                 result.IsSuccess = true;
                 result.Code = 200;
                 result.Data = User;
-                result.Message = "Dang nhap thanh cong";
+                result.Message = token;
                 return result;
 
             }

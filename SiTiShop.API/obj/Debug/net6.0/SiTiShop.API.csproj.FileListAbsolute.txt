@@ -253,3 +253,4 @@ D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.API\bin\Debug\net6.0\runtimes\win\lib\net
 D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.API\obj\Debug\net6.0\SiTiShop.API.RazorAssemblyInfo.cache
 D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.API\obj\Debug\net6.0\SiTiShop.API.RazorAssemblyInfo.cs
+D:\SiTiShop\SiTiShop\SiTiShop\SiTiShop.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

@@ -4,6 +4,8 @@ using SiTiShop.Data.Repositories.CategoryRepo;
 using SiTiShop.Business.Service.CategoryService;
 using SiTiShop.Data.Repositories.GenericRepository;
 using NuGet.Protocol.Core.Types;
+using SiTiShop.Business.Service.UserService;
+using SiTiShop.Data.Repositories.UserRepo;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +22,11 @@ builder.Services.AddDbContext<SiTiShopContext>(opt => opt.UseSqlServer(builder.C
 
 // Subcribe service
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 //Subcribe repository
 builder.Services.AddTransient<ICategoryRepo, CategoryRepo>();
+builder.Services.AddTransient<IUserRepo, UserRepo>();
 
 
 
