@@ -9,7 +9,7 @@ namespace SiTiShop.Business.Utilities.UserAuthentication
 {
     public class UserAuthentication
     {
-        public static byte[] CreatePasswordHash(string password)
+        protected static byte[] CreatePasswordHash(string password)
         {
             using (MD5 mh = MD5.Create())
             {
@@ -19,7 +19,7 @@ namespace SiTiShop.Business.Utilities.UserAuthentication
             }
         }
 
-        public static bool VerifyPasswordHash(byte[] array1, byte[] array2)
+        protected static bool VerifyPasswordHash(byte[] array1, byte[] array2)
         {
             if (array1.Length != array2.Length)
                 return false;
