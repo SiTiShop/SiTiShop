@@ -12,5 +12,7 @@ namespace SiTiShop.Business.Service.UserService
         public Task<ResultModel> Register(string UserName, string Password, string FullName, string PhoneNumber, string Email);
 
         public Task<ResultModel> Login(string UserName, string Password);
+
+        public Task<ResultModel> ReadJWT(string jwtToken, string secretkey, string issuer);
     }
 }

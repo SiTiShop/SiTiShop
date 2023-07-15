@@ -114,5 +114,34 @@ namespace SiTiShop.Business.Service.UserService
             }
             return result;
         }
+
+        public async Task<ResultModel> ReadJWT(string jwtToken, string secretkey, string issuer)
+        {
+            ResultModel result = new();
+            try
+            {
+                var User = UserUtilities.ReadJwtToken(jwtToken, secretkey, issuer);
+                if (User == false)
+                {
+                    result.IsSuccess = false;
+                    result.Code = 400;
+                    result.Message = "JWT sai";
+                    return result;
+                }
+                result.IsSuccess = true;
+                result.Code = 200;
+                result.Data = User;
+                result.Message = "JWT da duoc xac thuc";
+                return result;
+
+            }
+            catch (Exception e)
+            {
+                result.IsSuccess = false;
+                result.Code = 400;
+                result.ResponseFailed = e.InnerException != null ? e.InnerException.Message + "\n" + e.StackTrace : e.Message + "\n" + e.StackTrace;
+            }
+            return result;
+        }
     }
 }

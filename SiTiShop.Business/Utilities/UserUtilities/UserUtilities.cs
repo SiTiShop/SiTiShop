@@ -56,11 +56,57 @@ namespace SiTiShop.Business.Utilities.UserUtilities
                 issuer: Issuser,
                 audience: Issuser,
                 claims,
-                expires: DateTime.Now.AddDays(1),
+                expires: DateTime.Now.AddMinutes(1),
                 signingCredentials: credential
                 );
             var encodetoken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodetoken;
+        }
+
+        public static bool ReadJwtToken(string jwtToken, string secretKey, string issuer)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var validationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey)),
+                ValidateIssuer = true,
+                ValidIssuer = issuer,
+                ValidateAudience = false,
+                ValidateLifetime = true
+            };
+
+            try
+            {
+                var claimsPrincipal = tokenHandler.ValidateToken(jwtToken, validationParameters, out var validatedToken);
+                var jwtSecurityToken = (JwtSecurityToken)validatedToken;
+                string userId = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
+                string jti = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti)?.Value;
+
+                //Console.WriteLine("User ID: " + userId);
+                //Console.WriteLine("Username: " + jti);
+                if (jwtSecurityToken.ValidTo < DateTime.UtcNow)
+                {
+                    Console.WriteLine("Token has expired.");
+                    return false;
+                }
+                return true;
+            }
+            catch (SecurityTokenExpiredException)
+            {
+                Console.WriteLine("Token has expired.");
+                return false;
+            }
+            catch (SecurityTokenValidationException ex)
+            {
+                Console.WriteLine("Invalid token: " + ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error reading token: " + ex.Message);
+                return false;
+            }
         }
     }
 }
