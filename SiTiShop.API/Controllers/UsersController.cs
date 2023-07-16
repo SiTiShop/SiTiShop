@@ -36,9 +36,9 @@ namespace SiTiShop.API.Controllers
         }
 
         [HttpPost("read-jwt")]
-        public async Task<IActionResult> ReadJwt(string jwtToken, string secretkey, string issuer)
+        public IActionResult ReadJwt(string jwtToken, string secretkey, string issuer)
         {
-            Data.Models.ResultModel.ResultModel result = await _user.ReadJWT(jwtToken, secretkey, issuer);
+            Data.Models.ResultModel.ResultModel result = _user.ReadJWT(jwtToken, secretkey, issuer);
             return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
     }

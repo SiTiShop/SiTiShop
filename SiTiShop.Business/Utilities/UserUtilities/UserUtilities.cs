@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using SiTiShop.Data.Entities;
+using SiTiShop.Data.Models.ResultModel;
 
 namespace SiTiShop.Business.Utilities.UserUtilities
 {
@@ -56,14 +57,14 @@ namespace SiTiShop.Business.Utilities.UserUtilities
                 issuer: Issuser,
                 audience: Issuser,
                 claims,
-                expires: DateTime.Now.AddMinutes(1),
+                expires: DateTime.Now.AddDays(1),
                 signingCredentials: credential
                 );
             var encodetoken = new JwtSecurityTokenHandler().WriteToken(token);
             return encodetoken;
         }
 
-        public static bool ReadJwtToken(string jwtToken, string secretKey, string issuer)
+        public static bool ReadJwtToken(string jwtToken, string secretKey, string issuer, ref ResultModel result)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var validationParameters = new TokenValidationParameters
@@ -87,24 +88,23 @@ namespace SiTiShop.Business.Utilities.UserUtilities
                 //Console.WriteLine("Username: " + jti);
                 if (jwtSecurityToken.ValidTo < DateTime.UtcNow)
                 {
-                    Console.WriteLine("Token has expired.");
                     return false;
                 }
                 return true;
             }
             catch (SecurityTokenExpiredException)
             {
-                Console.WriteLine("Token has expired.");
+                result.Message = "Token has expired";
                 return false;
             }
             catch (SecurityTokenValidationException ex)
             {
-                Console.WriteLine("Invalid token: " + ex.Message);
+                result.Message = "Invalid token: " + ex.Message;
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error reading token: " + ex.Message);
+                result.Message = "Error reading token: " + ex.Message;
                 return false;
             }
         }

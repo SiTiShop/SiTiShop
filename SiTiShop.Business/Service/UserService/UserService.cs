@@ -115,17 +115,16 @@ namespace SiTiShop.Business.Service.UserService
             return result;
         }
 
-        public async Task<ResultModel> ReadJWT(string jwtToken, string secretkey, string issuer)
+        public ResultModel ReadJWT(string jwtToken, string secretkey, string issuer)
         {
             ResultModel result = new();
             try
             {
-                var User = UserUtilities.ReadJwtToken(jwtToken, secretkey, issuer);
+                var User = UserUtilities.ReadJwtToken(jwtToken, secretkey, issuer, ref result);
                 if (User == false)
                 {
                     result.IsSuccess = false;
                     result.Code = 400;
-                    result.Message = "JWT sai";
                     return result;
                 }
                 result.IsSuccess = true;

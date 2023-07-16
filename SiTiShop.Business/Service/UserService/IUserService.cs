@@ -13,6 +13,6 @@ namespace SiTiShop.Business.Service.UserService
 
         public Task<ResultModel> Login(string UserName, string Password);
 
-        public Task<ResultModel> ReadJWT(string jwtToken, string secretkey, string issuer);
+        public ResultModel ReadJWT(string jwtToken, string secretkey, string issuer);
     }
 }
