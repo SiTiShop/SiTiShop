@@ -81,8 +81,8 @@ namespace SiTiShop.Business.Utilities.UserUtilities
             {
                 var claimsPrincipal = tokenHandler.ValidateToken(jwtToken, validationParameters, out var validatedToken);
                 var jwtSecurityToken = (JwtSecurityToken)validatedToken;
-                string userId = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
-                string jti = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti)?.Value;
+                string? userId = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
+                string? jti = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti)?.Value;
 
                 //Console.WriteLine("User ID: " + userId);
                 //Console.WriteLine("Username: " + jti);
