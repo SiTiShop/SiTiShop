@@ -84,7 +84,7 @@ namespace SiTiShop.Business.Utilities.UserUtilities
                 string? userId = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Sub)?.Value;
                 string? jti = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti)?.Value;
 
-                //Console.WriteLine("User ID: " + userId);
+                result.Data = userId;
                 //Console.WriteLine("Username: " + jti);
                 if (jwtSecurityToken.ValidTo < DateTime.UtcNow)
                 {
